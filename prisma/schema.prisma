@@ -1,0 +1,153 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum Gender {
+  male
+  female
+  others
+}
+
+enum Role{
+  user
+  admin
+}
+
+model User {
+ id String @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name String
+  email String?  @unique
+  username String? @unique
+  password String
+  gender Gender
+  profilePicture String
+  resetPasswordToken String
+  role Role @default(user)
+  websiteLink String
+  location String
+  institute String
+  bio String
+  githubLink String
+  answers Answers[]
+  views BlogPostViews[]
+  questionViews QuestionViews[]
+  question Question[]
+  blog BlogPosts[]
+  problem ProblemViews[]
+  notification Notification[]
+  answerReplies AnswerReplies[]
+}
+
+model BlogPosts {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title String
+  slug String @unique
+  readTime String 
+  html String
+  creator User @relation(fields: [authorId], references: [id])
+  authorId String
+  views Int
+}
+
+model Question {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title String
+  slug String @unique
+  description String
+  tags String[]
+  creator User @relation(fields: [authorId], references: [id])
+  authorId String
+  comments Int?
+  views Int?
+}
+
+
+model Problem {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title String
+  slug String @unique
+  description String
+  tags String[]
+  authorId String
+  views Int?
+}
+
+model AnswerReplies {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  replyTime DateTime @default(now())
+  mainAnswerId String @db.ObjectId
+  answer String
+  creator User @relation(fields: [replyCreatorId], references: [id])
+  replyCreatorId String @db.ObjectId
+}
+
+model Answers {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  answeredTime DateTime @default(now())
+  slug String
+  answer String
+  creator User @relation(fields: [answerCreatorId], references: [id])
+  answerCreatorId String @db.ObjectId
+  totalReplies Int
+}
+
+model BlogPostViews {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  viewedAt DateTime @default(now())
+  slug String @unique
+  viewer User @relation(fields: [viewerId], references: [id])
+  viewerId String @db.ObjectId
+}
+
+model QuestionViews {
+   id String @id @default(auto()) @map("_id") @db.ObjectId
+  viewedAt DateTime @default(now())
+  slug String @unique
+  viewer User @relation(fields: [viewerId], references: [id])
+  viewerId String @db.ObjectId
+}
+
+model ProblemViews {
+   id String @id @default(auto()) @map("_id") @db.ObjectId
+  viewedAt DateTime @default(now())
+  slug String @unique
+  viewer User @relation(fields: [viewerId], references: [id])
+  viewerId String @db.ObjectId
+}
+
+model Notification {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  viewedBy String[]
+  creator User @relation(fields: [notificationCreatorId], references: [id])
+  notificationCreatorId String @db.ObjectId
+  slug String
+  notificationFor String
+}
+
+model Topic {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  title String
+  slug String @unique
+  description String
+  readTime String
+}
