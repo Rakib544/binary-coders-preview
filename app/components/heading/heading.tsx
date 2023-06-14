@@ -22,7 +22,7 @@ const Heading = () => {
             }}
           >
             <motion.div variants={childVariants}>
-              <H4 className='font-normal my-2'>Programming Fundamentals:</H4>
+              <H4 className='font-normal my-2'>Programming Fundamentals</H4>
             </motion.div>
             <motion.div variants={childVariants}>
               <H1>Grab the Opportunity You Missed</H1>
