@@ -18,12 +18,12 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
   return (
     <Menu as='div' className='relative inline-block text-left'>
       <div>
-        <Menu.Button className='inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none'>
-          <div className='bg-gradient-to-r from-cyan-500 to-blue-500  p-0.5 rounded-full'>
+        <Menu.Button className='inline-flex justify-center w-full px-4 py-2 text-sm font-mediumfocus:outline-none'>
+          <div className='bg-gradient-to-r  from-pink-500 to-violet-500  p-0.5 rounded-full overflow-hidden'>
             <div className='bg-white p-0.5 rounded-full z-10'>
               <BlurrableImage
                 blurDataURl={blurImgUrl}
-                className='h-12 w-12 mx-auto relative'
+                className='h-12 w-12 mx-auto relative '
                 img={
                   <img
                     src={profilePicture}

@@ -1,6 +1,5 @@
 import { MetaFunction } from '@remix-run/node'
 import AdvantageBinaryCoders from '~/components/advantageBinaryCoders/advantageBinaryCoders'
-import Plan from '~/components/ourPlan/plan'
 import Quote from '~/components/quote/quote'
 import Stack from '~/components/stack/stack'
 import Heading from '../components/heading/heading'
@@ -34,14 +33,14 @@ export function links() {
 }
 export default function Index() {
   return (
-    <div>
+    <main className='text-white'>
       <Heading />
       <OurTarget />
-      <Plan />
+      {/* <Plan /> */}
       <Stack />
       <Quote />
       <AdvantageBinaryCoders />
-    </div>
+    </main>
   )
 }
 

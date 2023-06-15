@@ -1,6 +1,6 @@
 const Map = () => {
   return (
-    <div className='mx-auto container-lg'>
+    <div className='mx-auto container'>
       <div className='milestone-map'>
         <div className='milestone milestone-1' style={{ gridArea: 'a / a / a / a' }}>
           <span className='semester-pointer semester-1 shadow-lg'>1</span>
