@@ -10,11 +10,11 @@ export default function DisCloserMenu({ topics, title }: { topics: Topics[]; tit
   const location = useLocation()
   return (
     <div className='w-full'>
-      <div className='mx-auto w-full max-w-md rounded-2xl bg-white p-2'>
+      <div className='mx-auto w-full max-w-md rounded-2xl p-2'>
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className='flex w-full justify-between rounded-lg bg-white-100 px-4 py-2 text-left text-md font-medium text-slate-700 hover:bg-slate-100 focus:outline-none focus-visible:ring focus-visible:ring-sky-500 focus-visible:ring-opacity-75 items-center'>
+              <Disclosure.Button className='flex w-full justify-between rounded-lg px-4 py-2 text-left text-md font-medium text-white hover:bg-slate-900 focus:outline-none focus-visible:ring focus-visible:ring-sky-500 focus-visible:ring-opacity-75 items-center'>
                 <span>{title}</span>
 
                 <svg
@@ -25,7 +25,7 @@ export default function DisCloserMenu({ topics, title }: { topics: Topics[]; tit
                   strokeWidth={2}
                   className={`transition duration-300 ${
                     open ? 'rotate-180 transform' : ''
-                  } h-4 w-4 text-slate-700`}
+                  } h-4 w-4 text-white`}
                 >
                   <path strokeLinecap='round' strokeLinejoin='round' d='M5 15l7-7 7 7' />
                 </svg>
@@ -38,7 +38,7 @@ export default function DisCloserMenu({ topics, title }: { topics: Topics[]; tit
                 leaveFrom='transform  opacity-100'
                 leaveTo='transform  opacity-0'
               >
-                <Disclosure.Panel className='px-4 pt-4 pb-2 text-lg text-gray-700'>
+                <Disclosure.Panel className='px-4 pt-4 pb-2 text-lg text-white'>
                   {topics?.map((topic: Topics) => (
                     <Link
                       key={topic.title}

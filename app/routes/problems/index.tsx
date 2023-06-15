@@ -209,8 +209,10 @@ const Index = () => {
               <Link
                 to={to}
                 prefetch='intent'
-                className={`block px-4 py-3 bg-white font-medium my-2 text-sm rounded-xl hover:ring-1 hover:ring-sky-500 hover:text-sky-500 transition duration-300 shadow-xl shadow-blue-500/10 ${
-                  location.search === active ? 'ring-1 ring-sky-500 text-sky-500' : ''
+                className={`block px-4 py-3 font-medium my-2 text-sm rounded-xl hover:ring-1 hover:ring-sky-500 hover:text-sky-500 transition duration-300 ${
+                  location.search === active
+                    ? 'ring-1 ring-sky-500 text-sky-500'
+                    : 'ring-1 ring-slate-600/40 text-white'
                 }`}
               >
                 {label}
@@ -257,11 +259,11 @@ const ProblemsCard = ({ problem }: ProblemCard) => (
       prefetch='intent'
       to={`/problems/${problem.slug}`}
       // variants={childVariants}
-      className='block my-2 p-4 bg-white rounded-xl transition duration-300 shadow-2xl shadow-blue-500/10 border border-sky-50'
+      className='block my-2 p-4 rounded-xl transition duration-300 border border-slate-600/40'
     >
       <div>
         <div className='grid grid-cols-10 items-center flex-end'>
-          <H6 className='md:truncate col-span-10 mt-4 md:mt-0 md:col-span-9 hover:underline'>
+          <H6 className='text-white md:truncate col-span-10 mt-4 md:mt-0 md:col-span-9 hover:underline'>
             {problem.title}
           </H6>
           <div className='hidden col-span-10 md:col-span-1 md:flex space-x-2'>

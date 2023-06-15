@@ -40,8 +40,8 @@ const TopicDetails = () => {
   const loaderData = useLoaderData()
   return (
     <div className='grid grid-cols-12 gap-6 px-4 lg:px-8 mb-10 pt-10 lg:pt-0'>
-      <aside className='hidden lg:block col-span-0 lg:col-span-3 bg-white'>
-        <div className=' h-screen overflow-y-scroll fixed bg-white w-72 inset-0'>
+      <aside className='hidden lg:block col-span-0 lg:col-span-3'>
+        <div className=' h-screen overflow-y-auto fixed w-72 inset-0'>
           <div className='mt-28'>
             {loaderData?.role === 'admin' && (
               <Link

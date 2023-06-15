@@ -186,8 +186,10 @@ const Index = () => {
               <Link
                 to='/question'
                 prefetch='intent'
-                className={`block px-4 py-3 bg-white font-medium my-2 text-sm rounded-xl hover:ring-1 hover:ring-sky-500 hover:text-sky-500 transition duration-300 shadow-xl shadow-blue-500/10 ${
-                  location.search === '' ? 'ring-1 ring-sky-500 text-sky-500' : ''
+                className={`block px-4 py-3 font-medium my-2 text-sm rounded-xl hover:ring-1 hover:ring-sky-500 hover:text-sky-500 transition duration-300 ${
+                  location.search === ''
+                    ? 'ring-1 ring-sky-500 text-sky-500'
+                    : 'ring-1 ring-slate-600/40 text-white'
                 }`}
               >
                 All Questions
@@ -198,8 +200,10 @@ const Index = () => {
                 <Link
                   to='/question?query=me'
                   prefetch='intent'
-                  className={`block px-4 py-3 bg-white font-medium my-2 text-sm rounded-xl hover:ring-1 hover:ring-sky-500 hover:text-sky-500 transition duration-300 shadow-xl shadow-blue-500/10 ${
-                    location.search === '?query=me' ? 'ring-1 ring-sky-500 text-sky-500' : ''
+                  className={`block px-4 py-3 font-medium my-2 text-sm rounded-xl hover:ring-1 hover:ring-sky-500 hover:text-sky-500 transition duration-300 ${
+                    location.search === '?query=me'
+                      ? 'ring-1 ring-sky-500 text-sky-500'
+                      : 'ring-1 ring-slate-600/40 text-white'
                   }`}
                 >
                   My Questions

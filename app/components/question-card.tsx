@@ -45,7 +45,7 @@ const QuestionCard = ({ slug, title, createdAt, views, comments, creator }: Post
       <Link
         prefetch='intent'
         to={`/question/${slug}`}
-        className='bg-white py-4 px-4 rounded-xl grid grid-cols-10 my-4 shadow-2xl shadow-blue-500/10 border border-sky-50'
+        className='text-white py-4 px-4 rounded-xl grid grid-cols-10 my-4 gap-1 border border-slate-600/40'
       >
         <div className='col-span-10 md:col-span-1 flex justify-between'>
           <BlurrableImage
@@ -67,23 +67,23 @@ const QuestionCard = ({ slug, title, createdAt, views, comments, creator }: Post
             </div>
             <div className='flex items-center space-x-1'>
               <CommentIcons />
-              <small className='text-xs font-medium text-slate-500'>{comments}</small>
+              <small className='text-xs font-medium text-white'>{comments}</small>
             </div>
           </div>
         </div>
         <div className='col-span-9'>
           <div className='grid grid-cols-10 items-center gap-4'>
-            <H6 className='md:truncate col-span-10 mt-4 md:mt-0 md:col-span-8 hover:underline'>
+            <H6 className='text-white md:truncate col-span-10 mt-4 md:mt-0 md:col-span-8 hover:underline'>
               {title}
             </H6>
             <div className='hidden col-span-10 md:col-span-2 md:flex space-x-2'>
               <div className='flex items-center space-x-1'>
                 <EyeIcon />
-                <small className='text-xs font-medium text-slate-500'>{views}</small>
+                <small className='text-xs font-medium text-white'>{views}</small>
               </div>
               <div className='flex items-center space-x-1'>
                 <CommentIcons />
-                <small className='text-xs font-medium text-slate-500'>{comments}</small>
+                <small className='text-xs font-medium text-white'>{comments}</small>
               </div>
             </div>
           </div>
