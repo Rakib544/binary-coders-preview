@@ -88,7 +88,7 @@ const Navbar = ({
               <Link prefetch='intent' to='/'>
                 <H1 className='text-5xl font-SpaceGroteskLight text-white'>
                   {'>'}_academy.
-                  <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                  <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-br from-sky-400 from-30%  to-blue-600 to-55% text-7xl'>
                     py
                   </span>{' '}
                 </H1>

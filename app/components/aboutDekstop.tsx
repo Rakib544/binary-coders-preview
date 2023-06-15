@@ -5,7 +5,7 @@ import BlurrableImage from '~/components/blurable-img'
 import FacebookIcon from '~/components/icons/facebook'
 import GitHubLogo from '~/components/icons/github'
 import LinkedinLogo from '~/components/icons/linkedin'
-import { teamData } from './temData'
+import { teamData } from '../../data/temData'
 export const meta: MetaFunction = () => {
   return {
     title: 'About - Binary Coders',

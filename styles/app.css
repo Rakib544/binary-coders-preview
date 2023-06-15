@@ -209,6 +209,20 @@ body {
   } */
 }
 
+.visionglance {
+  position: relative;
+  background-color: #3b82f6;
+}
+.visionGlance-1::after {
+  content: ' ';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  z-index: 100;
+}
 @media (max-width: 600px) {
   [data-reach-dialog-content] {
     width: 90vw;
