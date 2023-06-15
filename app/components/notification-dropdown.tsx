@@ -1,10 +1,10 @@
 import { Menu, Transition } from '@headlessui/react'
 import { Link, useFetcher } from '@remix-run/react'
+import { Bell } from 'lucide-react'
 import moment from 'moment'
 import * as React from 'react'
 import { Fragment } from 'react'
 import { io } from 'socket.io-client'
-import NotificationIcon from './icons/notification-icon'
 
 type Notification = {
   id: string
@@ -61,9 +61,9 @@ export default function NotificationDropDown({
     <>
       <Menu as='div' className='relative inline-block text-left'>
         <div>
-          <Menu.Button className='inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none'>
+          <Menu.Button className='inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white focus:outline-none'>
             <div className='relative cursor-pointer' onClick={loadNotification}>
-              <NotificationIcon />
+              <Bell strokeWidth={1} />
               {showNotification && (
                 <div className='absolute -top-0.5 right-0'>
                   <span className='flex relative h-3 w-3'>

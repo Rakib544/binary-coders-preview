@@ -8,7 +8,7 @@ type TitleProps = {
 } & { children: React.ReactNode }
 
 const fontSize = {
-  h1: 'leading-tight text-4xl md:text-5xl font-bold',
+  h1: '',
   h2: 'leading-tight text-3xl md:text-4xl',
   h3: 'text-2xl font-medium md:text-3xl',
   h4: 'text-lg font-medium md:text-2xl',
@@ -94,4 +94,4 @@ function Heading({
   )
 }
 
-export { H1, H2, H3, H4, H5, H6, Paragraph, Heading }
+export { H1, H2, H3, H4, H5, H6, Heading, Paragraph }
