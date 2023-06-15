@@ -10,7 +10,7 @@ const Heading = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   }
   return (
-    <div className="bg-[url('/images/hero-pattern-opacity.png')] bg-no-repeat bg-cover  py-32">
+    <div className="bg-[url('/images/hero-pattern-opacity.png')] bg-no-repeat bg-cover py-0 2xl:py-32">
       <div className='container'>
         <div className='grid grid-cols-2 place-items-center  text-center md:text-left'>
           <div className='col-span-2  md:col-span-1 order-2 md:order-1'>

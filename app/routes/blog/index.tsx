@@ -144,13 +144,13 @@ const index = () => {
         if (fetcher.data?.posts?.every((post: Post) => post.authorId === loaderData?.userId)) {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           setPosts((prevPosts: any) => {
-            return [...new Set([...prevPosts, ...fetcher.data.posts])]
+            return [...new Set([...prevPosts, ...(fetcher?.data?.posts as Array<Post>)])]
           })
         }
       } else {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         setPosts((prevPosts: any) => {
-          return [...new Set([...prevPosts, ...fetcher.data.posts])]
+          return [...new Set([...prevPosts, ...(fetcher?.data?.posts as Array<Post>)])]
         })
       }
     }

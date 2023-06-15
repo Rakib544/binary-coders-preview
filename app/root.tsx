@@ -348,7 +348,7 @@ export default function App() {
         />
         <main
           className={`relative w-full App ${
-            shouldAddMargin(location.pathname) ? 'mt-16 md:mt-32' : ''
+            shouldAddMargin(location.pathname) ? 'mt-16 md:mt-20' : ''
           }`}
         >
           <PageLoadingMessage />

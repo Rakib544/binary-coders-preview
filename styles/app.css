@@ -163,6 +163,11 @@ body {
   background-color: rgb(17 17 33 / var(--tw-bg-opacity));
 }
 
+.background-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 33 / var(--tw-bg-opacity));
+}
+
 @layer utilities {
   .App {
     min-height: 100vh;
