@@ -238,6 +238,7 @@ const marginHideFrom = [
   '/auth/reset',
   '/auth/register',
   '/auth/new-password',
+  '/chat-ai',
 ]
 
 function shouldAddMargin(pathName: string) {
@@ -325,19 +326,22 @@ function PostNotification({
 export default function App() {
   const loaderData = useLoaderData()
   const location = useLocation()
+
   return (
     <html lang='en' className='scroll-smooth'>
       <head>
         <Meta />
         <Links />
       </head>
-      <body className='font-barlow bg-test relative'>
-        <Navbar
-          NOTIFICATION_SERVER_URL={loaderData?.NOTIFICATION_SERVER_URL}
-          fullName={loaderData?.fullName as string}
-          username={loaderData?.username as string}
-          profilePicture={loaderData?.profilePicture as string}
-        />
+      <body className='font-barlow relative'>
+        {location.pathname === '/chat-ai' ? null : (
+          <Navbar
+            NOTIFICATION_SERVER_URL={loaderData?.NOTIFICATION_SERVER_URL}
+            fullName={loaderData?.fullName as string}
+            username={loaderData?.username as string}
+            profilePicture={loaderData?.profilePicture as string}
+          />
+        )}
         <PostNotification
           NOTIFICATION_SERVER_URL={loaderData?.NOTIFICATION_SERVER_URL}
           userId={loaderData?.userId}
@@ -353,7 +357,7 @@ export default function App() {
           <Scripts />
           {process.env.NODE_ENV === 'development' && <LiveReload />}
         </main>
-        <Footer />
+        {location.pathname === '/chat-ai' ? null : <Footer />}
       </body>
     </html>
   )
