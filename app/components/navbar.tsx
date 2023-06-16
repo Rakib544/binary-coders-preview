@@ -86,9 +86,9 @@ const Navbar = ({
           <div className='flex items-center justify-between py-4 md:py-2 px-2 md:px-10'>
             <div className='flex items-center justify-between z-10 '>
               <Link prefetch='intent' to='/'>
-                <H1 className='text-5xl font-SpaceGroteskLight text-white'>
+                <H1 className='text-2xl lg:text-3xl 2xl:text-5xl font-SpaceGroteskLight text-white'>
                   {'>'}_academy.
-                  <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-br from-sky-400 from-30%  to-blue-600 to-55% text-7xl'>
+                  <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-br from-sky-400 from-30%  to-blue-600 to-55% text-4xl lg:text-5xl 2xl:text-7xl'>
                     py
                   </span>{' '}
                 </H1>

@@ -1,6 +1,7 @@
 export const headerNavLinks = [
   // { href: '/about', title: 'About' },
-  { href: '/python', title: 'Python Tutorial' },
+  { href: '/python', title: 'Python Docs' },
+  { href: '/learn/1', title: 'Python Video' },
   { href: '/blog', title: 'Blog' },
   { href: '/question', title: 'Question' },
   { href: '/problems', title: 'Solve Problems' },

@@ -57,7 +57,7 @@ const Me = () => {
   const actionData = useActionData()
   return (
     <div>
-      <H4>Update your account</H4>
+      <H4 className='text-white'>Update your account</H4>
       <div className='p-4'>
         <Form method='post' className='space-y-6'>
           <div className='my-2'>
@@ -76,7 +76,7 @@ const Me = () => {
             )}
           </div>
           <div className='my-2'>
-            <label className='text-sm mb-1 font-medium' htmlFor='email'>
+            <label className='text-sm mb-1 font-medium text-white' htmlFor='email'>
               Email Address (Email address can&apos;t be changed)
             </label>
             <input
@@ -94,7 +94,7 @@ const Me = () => {
               type='submit'
               name='action'
               value='info'
-              className='px-8 sm:px-12 inline-block my-4 py-2 sm:py-3  bg-blue-500 text-white rounded-lg text-sm font-medium shadow-lg hover:bg-blue-600 transition duration-200 shadow-blue-500/50'
+              className='px-8 sm:px-12 inline-block my-4 py-2 sm:py-3  bg-blue-500 text-white rounded-lg text-sm font-medium hover:bg-blue-600 transition duration-200 '
             >
               {transition.submission?.method === 'POST' && transition.submission ? (
                 <div className='flex justify-center items-center'>
