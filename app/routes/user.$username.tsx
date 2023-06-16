@@ -73,7 +73,7 @@ const publicProfile = () => {
       <div
         className={
           // eslint-disable-next-line quotes
-          "bg-[url('/images/profile-bg.jpg')] bg-cover"
+          "bg-[url('/images/profile-bg.jpg')] bg-cover "
         }
       >
         <div className='flex items-center space-x-4 backdrop-opacity-10 backdrop-invert bg-slate-900/90 py-6 rounded-t-xl'>
@@ -85,22 +85,22 @@ const publicProfile = () => {
           <h1 className='font-extrabold mt-20 text-3xl text-white'>{user?.name}</h1>
         </div>
       </div>
-      <div className='h-12 bg-white rounded-b-xl shadow-sm'></div>
+      <div className='h-12 bg-[#121324] rounded-b-xl shadow-sm border-b border-slate-600/40'></div>
 
       {/* main part start here */}
       <div className='grid grid-cols-4 gap-8 my-10'>
         <div className='col-span-4 lg:col-span-1 '>
-          <div className='bg-white p-4 rounded-lg shadow-2xl shadow-blue-500/10'>
+          <div className='bg-[#121324] p-4 rounded-lg border border-slate-600/40 text-white'>
             <Paragraph>{blogs?.length} blog written</Paragraph>
             <Paragraph>{questions?.length} question asked</Paragraph>
           </div>
           {/* about */}
-          <div className='my-4 p-4 bg-white rounded-lg shadow-2xl shadow-blue-500/10'>
-            <h3 className='font-medium text-lg text-slate-700'>About</h3>
-            <p className='my-2 text-slate-500'>{user?.bio}</p>
+          <div className='my-4 p-4 bg-[#121324] rounded-lg border border-slate-600/40 text-white'>
+            <h3 className='font-medium text-lg'>About</h3>
+            <p className='my-2 text-slate-400'>{user?.bio}</p>
             <ul>
               {user?.location && (
-                <li className='grid grid-cols-10 text-sm my-1 text-slate-500'>
+                <li className='grid grid-cols-10 text-sm my-1 text-slate-400'>
                   <span className='col-span-1 mt-1'>
                     <LocationIcon />
                   </span>{' '}
@@ -142,7 +142,7 @@ const publicProfile = () => {
             </ul>
           </div>
           {/* social */}
-          <div className='my-4 p-4 bg-white rounded-lg shadow-2xl shadow-blue-500/10'>
+          <div className='my-4 p-4 bg-[#111121] rounded-lg border border-slate-600/40 text-white'>
             <h3 className='font-medium text-lg'>Social</h3>
 
             <ul className='flex space-x-2 my-4'>
@@ -176,7 +176,7 @@ const publicProfile = () => {
           )}
           {blogs?.length > 0 && (
             <div>
-              <h2 className='text-2xl text-slate-700 font-bold'>Recent written blogs</h2>
+              <h2 className='text-2xl text-white font-bold'>Recent written blogs</h2>
               <div>
                 {blogs?.map((blog: Post) => (
                   <BlogCard key={blog.slug} {...blog} />
@@ -186,7 +186,7 @@ const publicProfile = () => {
           )}
           {questions?.length > 0 && (
             <div className='mt-10'>
-              <h2 className='text-2xl text-slate-700 font-bold'>Recent asked questions</h2>
+              <h2 className='text-2xl text-white font-bold'>Recent asked questions</h2>
               <div>
                 {questions?.map((question: Question) => (
                   <QuestionCard key={question.slug} {...question} />

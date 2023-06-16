@@ -1,8 +1,9 @@
 import { ActionFunction, json } from '@remix-run/node'
-import { useFetcher } from '@remix-run/react'
+import { Link, useFetcher } from '@remix-run/react'
 import { blurImgUrl } from 'data/blur-img-url'
 import { useEffect, useState } from 'react'
 import BlurrableImage from '~/components/blurable-img'
+import { H1 } from '~/components/typography'
 import { getAiData } from '~/utils/open-ai.server'
 
 export const action: ActionFunction = async ({ request }) => {
@@ -24,7 +25,9 @@ export default function AskAI() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function loadResponse(e: any) {
     e.preventDefault()
-    fetcher.submit({ value: text }, { method: 'post' })
+    if (text) {
+      fetcher.submit({ value: text }, { method: 'post' })
+    }
   }
 
   useEffect(() => {
@@ -39,87 +42,97 @@ export default function AskAI() {
   }, [fetcher])
 
   return (
-    <div className='max-w-3xl px-4 mx-auto w-full text-slate-200'>
-      {questions.map((data) => (
-        <div className='my-8 ' key={data.answer}>
-          <div className='flex gap-x-4 items-center rounded p-3 border bg-slate-900 border-slate-600/40'>
-            <BlurrableImage
-              blurDataURl={blurImgUrl}
-              className='h-12 w-12 relative shrink-0'
-              img={
-                <img
-                  src='https://i.ibb.co/s1Xp3yN/user.png'
-                  alt=''
-                  className='rounded-full h-12 w-12 object-cover shrink-0'
-                />
-              }
-            />
-            <p>{data.question}</p>
+    <>
+      <Link prefetch='intent' to='/' className='fixed top-2 left-5'>
+        <H1 className='text-xl lg:text-2xl 2xl:text-4xl font-SpaceGroteskLight text-white'>
+          {'>'}_academy.
+          <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-br from-sky-400 from-30%  to-blue-600 to-55% text-3xl lg:text-4xl 2xl:text-6xl'>
+            py
+          </span>{' '}
+        </H1>
+      </Link>
+      <div className='max-w-3xl px-4 mx-auto w-full text-slate-200'>
+        {questions.map((data) => (
+          <div className='my-8 ' key={data.answer}>
+            <div className='flex gap-x-4 items-center rounded p-3 border bg-slate-900 border-slate-600/40'>
+              <BlurrableImage
+                blurDataURl={blurImgUrl}
+                className='h-12 w-12 relative shrink-0'
+                img={
+                  <img
+                    src='https://i.ibb.co/s1Xp3yN/user.png'
+                    alt=''
+                    className='rounded-full h-12 w-12 object-cover shrink-0'
+                  />
+                }
+              />
+              <p>{data.question}</p>
+            </div>
+            <div className='flex gap-x-3 items-top mt-3'>
+              <BlurrableImage
+                blurDataURl={blurImgUrl}
+                className='h-16 w-16 relative shrink-0'
+                img={
+                  <img
+                    src='https://i.ibb.co/WpNQf9c/icons8-chatbot-64.png'
+                    alt=''
+                    className='rounded-full h-12 w-12 object-cover shrink-0'
+                  />
+                }
+              />
+              <p>{data.answer}</p>
+            </div>
           </div>
-          <div className='flex gap-x-3 items-top mt-3'>
-            <BlurrableImage
-              blurDataURl={blurImgUrl}
-              className='h-16 w-16 relative shrink-0'
-              img={
-                <img
-                  src='https://i.ibb.co/WpNQf9c/icons8-chatbot-64.png'
-                  alt=''
-                  className='rounded-full h-12 w-12 object-cover shrink-0'
-                />
-              }
-            />
-            <p>{data.answer}</p>
-          </div>
-        </div>
-      ))}
+        ))}
 
-      {fetcher.state !== 'idle' ? (
-        <div className='my-8'>
-          <div className='flex gap-x-4 items-center rounded p-3 border bg-slate-900 border-slate-600/40'>
-            <BlurrableImage
-              blurDataURl={blurImgUrl}
-              className='h-12 w-12 relative shrink-0'
-              img={
-                <img
-                  src='https://i.ibb.co/s1Xp3yN/user.png'
-                  alt=''
-                  className='rounded-full h-12 w-12 object-cover shrink-0'
-                />
-              }
-            />
-            <p>{text}</p>
+        {fetcher.state !== 'idle' ? (
+          <div className='my-8'>
+            <div className='flex gap-x-4 items-center rounded p-3 border bg-slate-900 border-slate-600/40'>
+              <BlurrableImage
+                blurDataURl={blurImgUrl}
+                className='h-12 w-12 relative shrink-0'
+                img={
+                  <img
+                    src='https://i.ibb.co/s1Xp3yN/user.png'
+                    alt=''
+                    className='rounded-full h-12 w-12 object-cover shrink-0'
+                  />
+                }
+              />
+              <p>{text}</p>
+            </div>
+            <div className='flex gap-x-3 items-top mt-3'>
+              <BlurrableImage
+                blurDataURl={blurImgUrl}
+                className='h-16 w-16 relative shrink-0'
+                img={
+                  <img
+                    src='https://i.ibb.co/WpNQf9c/icons8-chatbot-64.png'
+                    alt=''
+                    className='rounded-full h-12 w-12 object-cover shrink-0'
+                  />
+                }
+              />
+              <p>......</p>
+            </div>
           </div>
-          <div className='flex gap-x-3 items-top mt-3'>
-            <BlurrableImage
-              blurDataURl={blurImgUrl}
-              className='h-16 w-16 relative shrink-0'
-              img={
-                <img
-                  src='https://i.ibb.co/WpNQf9c/icons8-chatbot-64.png'
-                  alt=''
-                  className='rounded-full h-12 w-12 object-cover shrink-0'
-                />
-              }
-            />
-            <p>......</p>
-          </div>
-        </div>
-      ) : null}
+        ) : null}
 
-      <div className='fixed inset-x-0 bottom-0 w-full pb-12 flex justify-center background-dark'>
-        <form onSubmit={loadResponse} className='max-w-3xl w-full background-dark relative'>
-          <input
-            type='text'
-            onChange={(e) => setText(e.target.value)}
-            value={text}
-            placeholder='Write here'
-            className='px-4 py-3 w-full rounded-md border border-slate-600/40 bg-[#111121]/70 focus:outline-none focus:border-slate-600/90'
-          />
-          <button type='submit' className='absolute right-0 bg-sky-500 h-full px-5 rounded-md'>
-            Send
-          </button>
-        </form>
+        <div className='fixed inset-x-0 bottom-0 w-full pb-12 flex justify-center background-dark'>
+          <form onSubmit={loadResponse} className='max-w-3xl w-full background-dark relative'>
+            <input
+              type='text'
+              onChange={(e) => setText(e.target.value)}
+              value={text}
+              placeholder='Write here'
+              className='px-4 py-3 w-full rounded-md border border-slate-600/40 bg-[#111121]/70 focus:outline-none focus:border-slate-600/90'
+            />
+            <button type='submit' className='absolute right-0 bg-sky-500 h-full px-5 rounded-md'>
+              Send
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   )
 }

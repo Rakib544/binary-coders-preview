@@ -93,7 +93,7 @@ const password = () => {
             type='submit'
             name='action'
             value='updatePass'
-            className='px-8 sm:px-12 inline-block my-4 py-2 sm:py-3  bg-blue-500 text-white rounded-lg font-medium text-sm shadow-lg hover:bg-blue-600 transition duration-200 shadow-blue-500/50'
+            className='px-8 sm:px-12 inline-block my-4 py-2 sm:py-3  bg-blue-500 text-white rounded-lg font-medium text-sm hover:bg-blue-600 transition duration-200 '
           >
             {transition.submission ? (
               <div className='flex justify-center items-center'>

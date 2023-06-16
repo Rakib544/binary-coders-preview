@@ -23,7 +23,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
             <div className='bg-[#111121] text-white p-0.5 rounded-full z-10'>
               <BlurrableImage
                 blurDataURl={blurImgUrl}
-                className='h-12 w-12 mx-auto relative '
+                className='h-12 w-12 mx-auto relative'
                 img={
                   <img
                     src={profilePicture}
@@ -51,8 +51,8 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
           <>
             {' '}
             <div className='text-center my-2'>
-              <div className='bg-gradient-to-r inline-block from-cyan-500 to-blue-500  p-0.5 rounded-full'>
-                <div className='bg-white p-0.5 inline-block rounded-full'>
+              <div className=' inline-block bg-gradient-to-r  from-pink-500 to-violet-500  p-0.5 rounded-full'>
+                <div className='bg-[#111121] p-0.5 inline-block rounded-full'>
                   <img
                     src={profilePicture}
                     alt={username}
@@ -60,7 +60,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
                   />
                 </div>
               </div>
-              <p className='text-lg font-medium mt-2'>{fullName}</p>
+              <p className='text-lg font-medium mt-2 text-white'>{fullName}</p>
               <Link
                 prefetch='intent'
                 to={`/user/${username}`}

@@ -1166,6 +1166,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .bottom-6 {
   bottom: 1.5rem;
 }
@@ -1178,6 +1182,10 @@ video {
   left: 0px;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -1188,6 +1196,10 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.top-2 {
+  top: 0.5rem;
 }
 
 .top-32 {
@@ -1807,6 +1819,11 @@ video {
   transform-origin: top right;
 }
 
+.-translate-x-1 {
+  --tw-translate-x: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-translate-x-96 {
   --tw-translate-x: -24rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1911,6 +1928,10 @@ video {
           user-select: none;
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-10 {
   grid-template-columns: repeat(10, minmax(0, 1fr));
 }
@@ -1933,10 +1954,6 @@ video {
 
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -2011,9 +2028,19 @@ video {
   gap: 2rem;
 }
 
+.gap-x-1 {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
+}
+
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .gap-x-3 {
@@ -2177,10 +2204,6 @@ video {
   border-style: dotted;
 }
 
-.border-none {
-  border-style: none;
-}
-
 .border-\[\#242764\] {
   --tw-border-opacity: 1;
   border-color: rgb(36 39 100 / var(--tw-border-opacity));
@@ -2242,6 +2265,11 @@ video {
   border-color: rgb(255 255 255 / 0.3);
 }
 
+.bg-\[\#0F172A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#111121\] {
   --tw-bg-opacity: 1;
   background-color: rgb(17 17 33 / var(--tw-bg-opacity));
@@ -2249,6 +2277,11 @@ video {
 
 .bg-\[\#111121\]\/70 {
   background-color: rgb(17 17 33 / 0.7);
+}
+
+.bg-\[\#121324\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 19 36 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#131425be\] {
@@ -2440,12 +2473,6 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-sky-900 {
-  --tw-gradient-from: #0c4a6e var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(12 74 110 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-violet-600 {
   --tw-gradient-from: #7c3aed var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(124 58 237 / 0) var(--tw-gradient-to-position);
@@ -2518,10 +2545,6 @@ video {
 
 .to-sky-400 {
   --tw-gradient-to: #38bdf8 var(--tw-gradient-to-position);
-}
-
-.to-slate-800 {
-  --tw-gradient-to: #1e293b var(--tw-gradient-to-position);
 }
 
 .to-violet-500 {
@@ -3538,17 +3561,19 @@ video {
   src: url('/fonts/SpaceGrotesk-SemiBold.ttf');
 }
 
-/* body::-webkit-scrollbar {
+.custom-scroll::-webkit-scrollbar {
   width: 0.7em;
 }
-body::-webkit-scrollbar-track {
+
+.custom-scroll::-webkit-scrollbar-track {
   background-color: #e7e7e7;
   border-radius: 100vh;
 }
-body::-webkit-scrollbar-thumb {
+
+.custom-scroll::-webkit-scrollbar-thumb {
   background-image: linear-gradient(73deg, #06b6d4, #3b82f6);
   border-radius: 100vh;
-} */
+}
 
 body {
   --tw-bg-opacity: 1;
@@ -4053,6 +4078,15 @@ body {
 
 .focus-visible\:ring-opacity-75:focus-visible {
   --tw-ring-opacity: 0.75;
+}
+
+.group:hover .group-hover\:translate-x-1 {
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
 .group:hover .group-hover\:shadow-\[0px_0px_15px\] {
@@ -4622,5 +4656,47 @@ body {
 
   .lg\:pt-0 {
     padding-top: 0px;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .\32xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .\32xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .\32xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }

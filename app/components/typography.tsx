@@ -17,8 +17,8 @@ const fontSize = {
 }
 
 const titleColors = {
-  primary: 'text-slate-700',
-  secondary: 'text-slate-700',
+  primary: 'text-white',
+  secondary: 'text-white',
 }
 
 function Title({
@@ -66,7 +66,7 @@ type ParagraphProps = {
 function Paragraph({
   className,
   as = 'p',
-  textColorClassName = 'text-slate-500',
+  textColorClassName = 'text-slate-200',
   ...rest
 }: ParagraphProps) {
   return React.createElement(as, {

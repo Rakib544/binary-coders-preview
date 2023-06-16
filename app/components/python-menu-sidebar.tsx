@@ -15,7 +15,7 @@ export default function PythonMenuSideBar({ role }: { role: string }) {
 
   return (
     <>
-      <span onClick={() => setOpen(true)} className='cursor-pointer'>
+      <span onClick={() => setOpen(true)} className='cursor-pointer text-white'>
         <svg
           width='16'
           height='16'
@@ -74,7 +74,7 @@ export default function PythonMenuSideBar({ role }: { role: string }) {
         </svg>
       </span>
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as='div' className='relative z-10' onClose={setOpen}>
+        <Dialog as='div' className='relative z-10 bg-[#111121]' onClose={setOpen}>
           <Transition.Child
             as={Fragment}
             enter='ease-in-out duration-500'
@@ -84,12 +84,12 @@ export default function PythonMenuSideBar({ role }: { role: string }) {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <div className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' />
+            <div className='fixed inset-0 bg-[#111121] text-white bg-opacity-75 transition-opacity' />
           </Transition.Child>
 
-          <div className='fixed inset-0 overflow-hidden'>
-            <div className='absolute inset-0 overflow-hidden'>
-              <div className='pointer-events-none fixed inset-y-0 left-0 flex max-w-full'>
+          <div className='fixed inset-0 overflow-hidden bg-[#111121]'>
+            <div className='absolute inset-0 overflow-hidden bg-[#111121]'>
+              <div className='pointer-events-none fixed inset-y-0 left-0 flex max-w-full bg-[#111121]'>
                 <Transition.Child
                   as={Fragment}
                   enter='transform transition ease-in-out duration-500 sm:duration-700'
@@ -99,7 +99,7 @@ export default function PythonMenuSideBar({ role }: { role: string }) {
                   leaveFrom='translate-x-0'
                   leaveTo='-translate-x-full'
                 >
-                  <Dialog.Panel className='pointer-events-auto relative w-screen max-w-md'>
+                  <Dialog.Panel className='pointer-events-auto relative w-screen max-w-md '>
                     <Transition.Child
                       as={Fragment}
                       enter='ease-in-out duration-500'
@@ -109,7 +109,7 @@ export default function PythonMenuSideBar({ role }: { role: string }) {
                       leaveFrom='opacity-100'
                       leaveTo='opacity-0'
                     >
-                      <div className='absolute top-0 right-4 ml-8 flex pt-4 pl-2 sm:-ml-10 sm:pr-4'>
+                      <div className='absolute top-0 right-4 ml-8 flex pt-4 pl-2 sm:-ml-10 sm:pr-4 bg-[#111121]'>
                         <button
                           type='button'
                           className='rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white'
@@ -120,7 +120,7 @@ export default function PythonMenuSideBar({ role }: { role: string }) {
                         </button>
                       </div>
                     </Transition.Child>
-                    <div className='flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl'>
+                    <div className='flex h-full flex-col overflow-y-auto bg-[#111121]  py-6 shadow-xl'>
                       <div className='px-4 sm:px-6'>
                         <Dialog.Title className='text-xl ml-4 font-medium text-gray-900'>
                           Learn Python Programming
