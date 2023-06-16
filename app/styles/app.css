@@ -1166,6 +1166,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .bottom-6 {
   bottom: 1.5rem;
 }
@@ -1178,6 +1182,10 @@ video {
   left: 0px;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -1188,6 +1196,10 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.top-2 {
+  top: 0.5rem;
 }
 
 .top-32 {
@@ -1204,26 +1216,6 @@ video {
 
 .top-80 {
   top: 20rem;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
-.left-4 {
-  left: 1rem;
-}
-
-.left-10 {
-  left: 2.5rem;
-}
-
-.left-5 {
-  left: 1.25rem;
-}
-
-.top-2 {
-  top: 0.5rem;
 }
 
 .\!z-\[999px\] {
@@ -4985,45 +4977,45 @@ body {
     padding-top: 0px;
   }
 
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-}
 
-@media (min-width: 1536px) {
-  .\32xl\:text-5xl {
+  .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
   }
+}
 
-  .\32xl\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
+@media (min-width: 1536px) {
   .\32xl\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
 
+  .\32xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .\32xl\:text-6xl {
     font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .\32xl\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 }
