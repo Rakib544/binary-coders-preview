@@ -60,7 +60,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
                   />
                 </div>
               </div>
-              <p className='text-lg font-medium mt-2'>{fullName}</p>
+              <p className='text-lg font-medium mt-2 text-white'>{fullName}</p>
               <Link
                 prefetch='intent'
                 to={`/user/${username}`}

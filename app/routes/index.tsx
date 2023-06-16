@@ -1,6 +1,5 @@
 import { MetaFunction } from '@remix-run/node'
-import Vision from '~/components/Vision/vision'
-import OurVision from '~/components/ourvision/ourvision'
+import JoinWithUs from '~/components/join/joinwithus'
 import Heading from '../components/heading/heading'
 import Jurney from '../components/jurney/jurney'
 
@@ -35,10 +34,7 @@ export default function Index() {
     <main className='text-white'>
       <Heading />
       <Jurney />
-      {/* <Plan /> */}
-      <Vision />
-      {/* <Quote /> */}
-      <OurVision />
+      <JoinWithUs />
     </main>
   )
 }

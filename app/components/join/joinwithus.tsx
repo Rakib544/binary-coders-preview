@@ -1,0 +1,63 @@
+import { Link } from '@remix-run/react'
+import { motion } from 'framer-motion'
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
+
+const JoinWithUs = () => {
+  return (
+    <div className="my-32 container bg-[url('/images/registration-bg.svg')] ">
+      <motion.div
+        className='mx-auto w-11/12 mt-24 md:mb-16 md:mt-32 '
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className='font-SpaceGroteskSemiBold text-5xl leading-[4.2rem] text-center'>
+          {`>`}_ Join the{' '}
+          <span className='bg-clip-text text-transparent bg-gradient-to-r from-violet-600 from-10% via-blue-400 via-50%  to-sky-400 to-40% text-bold font-SpaceGroteskBold'>
+            <Link to={'/problems'}>Problem Solving Challenge</Link>
+          </span>{' '}
+          and <br /> test your skills in software development!
+        </h2>
+      </motion.div>
+
+      <div>
+        <ul className='space-y-5'>
+          <li className='flex items-center justify-center'>
+            {' '}
+            <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
+            Sign up on Academy.py and get ready to solve the problem your knowledge!
+          </li>
+          <li className='flex items-center justify-center'>
+            {' '}
+            <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
+            Sign up on Academy.py and get ready to solve the problem your knowledge!
+          </li>
+          <li className='flex items-center justify-center'>
+            {' '}
+            <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
+            Sign up on Academy.py and get ready to solve the problem your knowledge!
+          </li>
+          <li className='flex items-center justify-center'>
+            {' '}
+            <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
+            Sign up on Academy.py and get ready to solve the problem your knowledge!
+          </li>
+          <li className='flex items-center justify-center'>
+            {' '}
+            <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
+            Sign up on Academy.py and get ready to solve the problem your knowledge!
+          </li>
+        </ul>
+
+        <button className='px-4 py-2 rounded-full bg-gradient-to-r from-[#4BA2D3] to-[#7335FE] to-[99%] hover:scale-105 transition-all duration-500  mb-4  mx-auto w-fit block mt-10'>
+          <Link to={'/problems'} className='flex items-center'>
+            Purticipate Now <ArrowUpRight strokeWidth={0.75} className='ml-3' />
+          </Link>
+        </button>
+      </div>
+    </div>
+  )
+}
+
+export default JoinWithUs

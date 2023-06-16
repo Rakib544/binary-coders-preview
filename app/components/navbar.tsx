@@ -101,7 +101,7 @@ const Navbar = ({
               NOTIFICATION_SERVER_URL={NOTIFICATION_SERVER_URL}
             />
             <div>
-              <ul className='hidden md:flex items-center'>
+              <ul className='hidden flex-none md:flex items-center'>
                 {headerNavLinks.map((link) => (
                   <NavLink key={link.href} to={link.href} prefetch='intent' className='text-white'>
                     {link.title}
