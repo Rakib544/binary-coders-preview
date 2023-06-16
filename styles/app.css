@@ -173,6 +173,9 @@ body {
     position: relative;
     background-color: #111121;
   }
+  .border-color {
+    background-color: #404041a4;
+  }
   .visionGlance-1::after {
     content: ' ';
     position: absolute;
@@ -205,6 +208,17 @@ body {
     height: 1px;
     background-color: #ffffff80;
     z-index: -1;
+  }
+
+  .card-side-border::after {
+    content: ' ';
+    position: absolute;
+    left: 31.5%;
+    top: 10%;
+    width: 37%;
+    transform: rotate(-90deg);
+    height: 4px;
+    background-color: #ffffff80;
   }
 
   .App {
