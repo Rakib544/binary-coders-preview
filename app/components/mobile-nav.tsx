@@ -2,6 +2,7 @@
 import { Form, Link } from '@remix-run/react'
 import { headerNavLinks } from 'data/navbar'
 import { useState } from 'react'
+import 'react-modern-drawer/dist/index.css'
 import NotificationDropDown from './notification-dropdown'
 
 const mobileNavLinks = [{ href: '/', title: 'Home' }, ...headerNavLinks]
@@ -62,7 +63,7 @@ const MobileNav = ({
         </button>
       </div>
       <div
-        className={` fixed top-0 right-0 z-20 h-full w-full transform bg-[#111121] text-white duration-300 ease-in-out ${
+        className={` fixed top-0 right-0 z-50 h-full w-full transform !bg-[#111121] text-white duration-300 ease-in-out ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -72,7 +73,7 @@ const MobileNav = ({
           className='fixed h-full w-full cursor-auto focus:outline-none'
           onClick={onToggleNav}
         ></button>
-        <nav className='fixed py-6 px-6  h-full w-full z-20 bg-[#111121]'>
+        <nav className='fixed py-6 px-6  h-full w-full z-20 !bg-[#111121]'>
           {username && (
             <Link to={`/user/${username}`} prefetch='intent' onClick={onToggleNav}>
               <div className='flex items-center space-x-4 border-b border-slate-300 pb-4'>

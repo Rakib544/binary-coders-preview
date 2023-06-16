@@ -10,7 +10,7 @@ const Heading = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   }
   return (
-    <div className="bg-[url('/images/hero-pattern-opacity.png')] bg-no-repeat bg-cover bg-center  py-32">
+    <div className="bg-[url('/images/hero-pattern-opacity.png')] bg-no-repeat bg-cover bg-center py-0 2xl:py-32">
       <div className='container'>
         <div className='grid grid-cols-2 place-items-center  text-center md:text-left'>
           <div className='col-span-2  md:col-span-1 order-2 md:order-1'>
@@ -26,7 +26,7 @@ const Heading = () => {
                 <H4 className='font-normal mb-12 text-white'>Programming Fundamentals</H4>
               </motion.div>
               <motion.div variants={childVariants}>
-                <H1 className='bg-clip-text text-transparent bg-gradient-to-r from-white from-2% via-sky-400 via-20% to-blue-600 to-90% text-7xl font-SpaceGroteskBold'>
+                <H1 className='bg-clip-text text-transparent bg-gradient-to-r from-white from-2% via-sky-400 via-20% to-blue-600 to-90%  text-5xl lg:text-6xl 2xl:text-7xl font-SpaceGroteskBold'>
                   Grab the Opportunity <br /> You Missed
                 </H1>
               </motion.div>

@@ -9,8 +9,8 @@ const Vision = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className='font-SpaceGroteskBold text-5xl leading-[4.2rem] '>
-          {`>`}_ Our vision is to update you <br /> with international standard <br /> Python
+        <h2 className='font-SpaceGroteskBold text-3xl lg:text-5xl 2xl:text-5xl leading-[2.5rem] lg:leading-[4.2rem] mb-6 lg:mb-0 2xl:leading-[4.2rem]'>
+          {'>'}_ Our vision is to update you <br /> with international standard <br /> Python
           knowledge
         </h2>
       </motion.div>
@@ -21,7 +21,7 @@ const Vision = () => {
               Developer Guidance
             </span>
           </div>
-          <div className='grid grid-cols-2 gap-x-10 gap-y-5  pb-10 pt-10  overflow-hidden relative'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-5  pb-10 pt-10  overflow-hidden relative'>
             <div className='border-[#404041a4] border rounded-lg   md:pt-6 md:pb-8  card-side-border'>
               <div className='py-8 px-5 rounded-lg flex space-x-5 items-center h-full'>
                 <img
@@ -77,7 +77,7 @@ const Vision = () => {
               </span>
             </div>
           </div>
-          <div className='grid grid-cols-2 gap-x-10 gap-y-5  overflow-hidden relative pb-10 pt-10 '>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-5  overflow-hidden relative pb-10 pt-10 '>
             <div className='border-[#404041a4] border rounded-lg  md:pt-8 md:pb-6  card-side-border'>
               <div className='  py-8 px-5  flex space-x-5 items-center h-full'>
                 <img

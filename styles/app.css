@@ -234,3 +234,9 @@ body {
     width: 91.666667%;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .card-side-border::after {
+    display: none;
+  }
+}

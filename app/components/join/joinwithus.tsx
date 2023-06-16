@@ -6,14 +6,14 @@ const JoinWithUs = () => {
   return (
     <div className="my-32 container bg-[url('/images/registration-bg.svg')] ">
       <motion.div
-        className='mx-auto w-11/12 mt-24 md:mb-16 md:mt-32 '
+        className='mx-auto w-11/12 mt-24 mb-5 md:mb-16 md:mt-32 '
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className='font-SpaceGroteskSemiBold text-5xl leading-[4.2rem] text-center'>
-          {`>`}_ Join the{' '}
+        <h2 className='font-SpaceGroteskBold text-3xl lg:text-5xl 2xl:text-5xl leading-[2.5rem] lg:leading-[4.2rem] mb-6 lg:mb-0 2xl:leading-[4.2rem] text-center'>
+          {'>'}_ Join the{' '}
           <span className='bg-clip-text text-transparent bg-gradient-to-r from-violet-600 from-10% via-blue-400 via-50%  to-sky-400 to-40% text-bold font-SpaceGroteskBold'>
             <Link to={'/problems'}>Problem Solving Challenge</Link>
           </span>{' '}

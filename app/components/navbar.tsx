@@ -48,37 +48,6 @@ const Navbar = ({
   const location = useLocation()
   const isNavbarHide = NAVBAR_HIDES_FROM.includes(location.pathname)
 
-  // React.useEffect(() => {
-  //   const body = document.body
-  //   let topPosition = 0
-  //   function handleNavbar() {
-  //     const currentScroll = window.pageYOffset
-
-  //     if (currentScroll <= 0) {
-  //       body.classList.remove('scroll-up')
-  //     }
-  //     if (currentScroll > topPosition && !body.classList.contains('scroll-down')) {
-  //       body.classList.remove('scroll-up')
-  //       body.classList.add('scroll-down')
-  //     }
-  //     if (currentScroll < topPosition && body.classList.contains('scroll-down')) {
-  //       body.classList.remove('scroll-down')
-  //       body.classList.add('scroll-up')
-  //     }
-
-  //     topPosition = currentScroll
-  //   }
-
-  //   if (typeof window !== 'undefined') {
-  //     window.addEventListener('scroll', handleNavbar)
-  //   }
-  //   return () => {
-  //     if (typeof window !== 'undefined') {
-  //       window.removeEventListener('scroll', handleNavbar)
-  //     }
-  //   }
-  // }, [])
-
   return (
     <header className='bg-[#131425be] backdrop-blur-md sticky top-0 z-40 border-b-2 border-[#242764]'>
       <nav className='container '>

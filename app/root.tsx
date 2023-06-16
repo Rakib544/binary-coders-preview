@@ -15,6 +15,7 @@ import {
 import { blurImgUrl } from 'data/blur-img-url'
 import { AnimatePresence, motion } from 'framer-motion'
 import * as React from 'react'
+import 'react-modern-drawer/dist/index.css'
 import { io } from 'socket.io-client'
 import { useSpinDelay } from 'spin-delay'
 import BlurrableImage from './components/blurable-img'
