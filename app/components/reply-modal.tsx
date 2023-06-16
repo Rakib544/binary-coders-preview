@@ -25,7 +25,7 @@ const ReplyModal = ({
   }
   return (
     <Dialog
-      className='fixed md:inset-x-1/4 bottom-0 h-2/3 md:h-96 w-full md:w-2/3 z-10'
+      className='fixed md:inset-x-0 flex justify-center mx-auto bg-[#111121] text-white bottom-0 h-2/3 md:h-96 w-full md:w-2/3 z-10'
       onClose={onClose}
       open={true}
     >
@@ -54,7 +54,7 @@ const ReplyModal = ({
             y: '100%',
             transition: { duration: 0.3, ease: [0.36, 0.66, 0.04, 1] },
           }}
-          className='z-0 flex flex-col w-full h-full bg-white rounded-t-lg shadow-xl'
+          className='z-0 flex flex-col w-full h-full bg-[#111121] text-white border border-slate-600/40 rounded-t-lg shadow-xl'
         >
           <div className='flex justify-between p-2 md:p-4 '>
             <h3 className='flex items-center'>

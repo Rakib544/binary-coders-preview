@@ -20,7 +20,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
       <div>
         <Menu.Button className='inline-flex justify-center w-full px-4 py-2 text-sm font-mediumfocus:outline-none'>
           <div className='bg-gradient-to-r  from-pink-500 to-violet-500  p-0.5 rounded-full overflow-hidden'>
-            <div className='bg-white p-0.5 rounded-full z-10'>
+            <div className='bg-[#111121] text-white p-0.5 rounded-full z-10'>
               <BlurrableImage
                 blurDataURl={blurImgUrl}
                 className='h-12 w-12 mx-auto relative '
@@ -47,7 +47,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
         leaveFrom='transform opacity-100 scale-100'
         leaveTo='transform opacity-0 scale-95'
       >
-        <Menu.Items className='origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50'>
+        <Menu.Items className='origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-[#111121] ring-1 ring-slate-600/40 ring-opacity-5 focus:outline-none z-50'>
           <>
             {' '}
             <div className='text-center my-2'>
@@ -64,7 +64,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
               <Link
                 prefetch='intent'
                 to={`/user/${username}`}
-                className='px-4 py-2 bg-blue-500 shadow-blue-500/30 shadow-xl text-white inline-block text-sm rounded-full mt-2 mb-4'
+                className='px-4 py-2 bg-blue-500 text-white inline-block text-sm rounded-full mt-2 mb-4'
               >
                 View Profile
               </Link>
@@ -75,7 +75,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
               {() => (
                 <Link
                   to='/blog/create'
-                  className='py-3 px-4 w-full flex hover:bg-gray-100 text-slate-700 items-center space-x-2'
+                  className='py-3 px-4 w-full flex hover:bg-[#151529] text-slate-400 items-center space-x-2'
                 >
                   <PencilIcon />
                   <span className='text-sm'>Write Blogs</span>
@@ -87,7 +87,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
                 <Link
                   prefetch='intent'
                   to='/question/create'
-                  className='py-3 px-4 w-full flex hover:bg-gray-100 text-slate-700 items-center space-x-2'
+                  className='py-3 px-4 w-full flex hover:bg-[#151529] text-slate-400 items-center space-x-2'
                 >
                   <AskQuestionIcon />
                   <span className='text-sm'>Ask Question</span>
@@ -99,7 +99,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
                 <Link
                   prefetch='intent'
                   to='/setting'
-                  className='py-3 px-4 w-full flex hover:bg-gray-100 text-slate-700 items-center space-x-2'
+                  className='py-3 px-4 w-full flex hover:bg-[#151529] text-slate-400 items-center space-x-2'
                 >
                   <SettingIcon />
                   <span className='text-sm'>Settings</span>
@@ -110,7 +110,7 @@ export default function Dropdown({ fullName, username, profilePicture }: DropDow
               <Menu.Item>
                 {() => (
                   <button
-                    className='py-3 px-4 w-full flex hover:bg-gray-100 text-slate-700 items-center space-x-2'
+                    className='py-3 px-4 w-full flex hover:bg-[#151529] text-slate-400 items-center space-x-2'
                     type='submit'
                   >
                     <LogoutIcon />

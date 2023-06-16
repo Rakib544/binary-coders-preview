@@ -85,8 +85,8 @@ export default function NotificationDropDown({
           leaveFrom='transform opacity-100 scale-100'
           leaveTo='transform opacity-0 scale-95'
         >
-          <Menu.Items className='origin-top-right absolute right-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50 p-2 h-96 overflow-y-auto'>
-            {fetcher.state !== 'idle' && <p>Loading...</p>}
+          <Menu.Items className='origin-top-right absolute bg-[#111121] right-0 mt-2 w-64 rounded-md shadow-lg  ring-1 ring-slate-600/40 focus:outline-none z-50 p-2 h-96 overflow-y-auto'>
+            {fetcher.state !== 'idle' && <p className='text-slate-300'>Loading...</p>}
             {fetcher?.data?.notifications?.length === 0 && <p>No notification found</p>}
             {fetcher?.data?.notifications?.length > 0 &&
               fetcher?.data?.notifications?.map((notification: Notification) => (
@@ -95,7 +95,7 @@ export default function NotificationDropDown({
                     notification.slug
                   }`}
                   key={notification.id}
-                  className='block hover:bg-slate-100 p-2 rounded-xl'
+                  className='block hover:bg-[#1b1b2c] p-2 rounded-xl'
                 >
                   <div className='grid grid-cols-10 '>
                     <div className='col-span-3'>
@@ -106,7 +106,7 @@ export default function NotificationDropDown({
                       />
                     </div>
                     <div className='col-span-7'>
-                      <p className='text-sm text-slate-700'>
+                      <p className='text-sm text-slate-200'>
                         <Link
                           to={`/user/${notification.creator.username}`}
                           className='text-sky-500 font-medium'
@@ -116,7 +116,7 @@ export default function NotificationDropDown({
                         {notification.notificationFor === 'blog' && 'write a new blog'}
                         {notification.notificationFor === 'question' && 'Asked a question'}
                       </p>
-                      <small className='text-xs font-medium'>
+                      <small className='text-xs font-medium text-white'>
                         {moment(notification.createdAt).fromNow()}
                       </small>
                     </div>

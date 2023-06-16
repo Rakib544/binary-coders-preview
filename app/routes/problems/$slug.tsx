@@ -146,7 +146,7 @@ const SingleQuestion = () => {
                   onClick={() => setOpen(true)}
                 >
                   <EyeIcon />{' '}
-                  <small className='text-xs text-slate-500 font-medium'>{problem.views}</small>
+                  <small className='text-xs text-white font-medium'>{problem.views}</small>
                 </button>
               </Form>
               {role === 'admin' && (
@@ -156,14 +156,14 @@ const SingleQuestion = () => {
                 />
               )}
             </div>
-            <h1 className='text-2xl font-bold'>{problem?.title}</h1>
+            <h1 className='text-2xl font-bold text-white'>{problem?.title}</h1>
             <small className='font-medium text-slate-500'>
               Posted {moment(problem.createdAt).fromNow()}
             </small>
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: problem?.description }}
-            className='prose prose-slate lg:prose-md max-w-none mt-12 mb-32 prose-a:text-blue-600 siliguri-font'
+            className='prose prose-invert lg:prose-md max-w-none mt-12 mb-32 prose-a:text-blue-600 siliguri-font'
           />
         </div>
         <div className='col-span-5 md:col-span-3 p-4'>

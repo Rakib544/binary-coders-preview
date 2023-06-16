@@ -6,7 +6,7 @@ export const BackButton = ({ to }: { to: string }) => {
       <Link
         prefetch='intent'
         to={to}
-        className='flex items-center my-4 font-semibold text-slate-700 hover:text-slate-800'
+        className='flex items-center my-4 font-semibold text-slate-300 hover:text-white'
       >
         <span>
           <svg

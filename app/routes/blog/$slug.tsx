@@ -152,14 +152,12 @@ const SingleBlog = () => {
                   className='flex items-center space-x-1 cursor-pointer'
                   onClick={() => setOpen(true)}
                 >
-                  <EyeIcon />{' '}
-                  <small className='text-xs text-slate-500 font-medium'>{blog.views}</small>
+                  <EyeIcon /> <small className='text-xs text-white font-medium'>{blog.views}</small>
                 </button>
               </Form>
             </div>
             <div className='flex items-center space-x-1'>
-              <ReadTime />{' '}
-              <small className='text-xs text-slate-500 font-medium'>{blog.readTime}</small>
+              <ReadTime /> <small className='text-xs text-white font-medium'>{blog.readTime}</small>
             </div>
             {blog.authorId === loaderData?.userId && (
               <MenuDropDown handleOpenModal={handleOpenModal} url={`/blog/edit/${blog.slug}`} />
@@ -167,7 +165,7 @@ const SingleBlog = () => {
           </div>
           <motion.h1
             variants={fadeInUp}
-            className='text-2xl md:text-3xl font-extrabold text-slate-700 my-4'
+            className='text-2xl md:text-3xl font-extrabold text-white my-4'
           >
             {blog.title}
           </motion.h1>
@@ -188,7 +186,7 @@ const SingleBlog = () => {
               >
                 {creatorInfo.name}
               </Link>
-              <small className='block text-xs font-medium text-slate-500'>
+              <small className='block text-xs font-medium text-white'>
                 posted {moment(blog.createdAt).fromNow()}
               </small>
             </div>
@@ -197,7 +195,7 @@ const SingleBlog = () => {
         <motion.div
           variants={fadeInUp}
           dangerouslySetInnerHTML={{ __html: blog.html }}
-          className='prose prose-slate lg:prose-lg max-w-none mb-24 prose-a:text-blue-600 siliguri-font'
+          className='prose prose-invert text-white lg:prose-lg max-w-none mb-24 prose-a:text-blue-600 siliguri-font'
         ></motion.div>
       </motion.div>
       <Modal open={modalOpen} setOpen={setModalOpen}>

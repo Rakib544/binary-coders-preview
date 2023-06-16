@@ -102,7 +102,7 @@ const CreateBlogPost = () => {
               onChange={() => console.log('hello')}
               className='hidden'
             />
-            <span className='font-medium text-sm text-slate-600'>Content</span>
+            <span className='font-medium text-sm text-white'>Content</span>
             <Quill setHtml={setHtml} defaultValue={'<p></p>'} env={env} />
             {actionData?.status === 501 && actionData?.errorFor === 'description' && (
               <small className='block text-red-500'>{actionData?.message}</small>

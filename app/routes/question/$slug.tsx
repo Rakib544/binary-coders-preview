@@ -231,7 +231,7 @@ const SingleQuestion = () => {
                 onClick={() => setOpen(true)}
               >
                 <EyeIcon />{' '}
-                <small className='text-xs text-slate-500 font-medium'>{question.views}</small>
+                <small className='text-xs text-white font-medium'>{question.views}</small>
               </button>
             </Form>
             {question?.authorId === userId && (
@@ -243,7 +243,7 @@ const SingleQuestion = () => {
           </motion.div>
           <motion.h1
             variants={fadeInUp}
-            className='text-2xl md:text-4xl font-extrabold text-slate-700 my-2'
+            className='text-2xl md:text-4xl font-extrabold text-white my-2'
           >
             {question.title}
           </motion.h1>
@@ -254,8 +254,8 @@ const SingleQuestion = () => {
               className='h-10 w-10 rounded-xl object-cover'
             />
             <div>
-              <p className='font-medium text-slate-700'>{question.creator.name}</p>
-              <small className='block text-xs font-medium text-slate-500'>
+              <p className='font-medium text-white'>{question.creator.name}</p>
+              <small className='block text-xs font-medium text-white'>
                 <Link
                   prefetch='intent'
                   to={`/user/${question.creator.username}`}
@@ -271,12 +271,12 @@ const SingleQuestion = () => {
         <motion.div
           variants={fadeInUp}
           dangerouslySetInnerHTML={{ __html: question.description }}
-          className='prose prose-slate lg:prose-lg max-w-none mt-12 mb-32 prose-a:text-blue-600 siliguri-font'
+          className='prose prose-invert lg:prose-lg max-w-none mt-12 mb-32 prose-a:text-blue-600 siliguri-font'
         />
 
         <motion.h3
           variants={fadeInUp}
-          className='text-lg font-medium border-t border-slate-300 pt-3'
+          className='text-lg font-medium border-t border-slate-300 text-white pt-3'
         >
           {question.comments} Answers
         </motion.h3>
@@ -345,7 +345,6 @@ const SingleQuestion = () => {
             <div className='mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10'>
               <svg
                 className='h-6 w-6 text-red-600'
-                x-description='Heroicon name: outline/exclamation'
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
                 viewBox='0 0 24 24'

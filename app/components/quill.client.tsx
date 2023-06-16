@@ -121,7 +121,7 @@ function Quill({ defaultValue, setHtml, env, shouldQuillEmpty, height = '400px' 
 
   return (
     <div>
-      <div ref={quillRef} style={{ height: height }} />
+      <div ref={quillRef} style={{ height: height, color: '#fff' }} />
     </div>
   )
 }

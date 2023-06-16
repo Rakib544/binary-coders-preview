@@ -60,7 +60,7 @@ const Reply = ({ answer, userId }: Answer) => {
             className='h-12 w-12 rounded-lg object-cover'
           />
           <div>
-            <p className='font-medium text-slate-700 text-sm block'>{answer.creator.name}</p>
+            <p className='font-medium text-white text-sm block'>{answer.creator.name}</p>
             <small className='font-medium text-slate-500'>
               <Link
                 prefetch='intent'
@@ -76,12 +76,12 @@ const Reply = ({ answer, userId }: Answer) => {
         <div className='ml-14'>
           <div
             dangerouslySetInnerHTML={{ __html: answer.answer }}
-            className='prose prose-slate lg:prose-md max-w-none prose-a:text-blue-600'
+            className='prose prose-invert lg:prose-md max-w-none prose-a:text-blue-600'
           />
           {userId && (
             <button
               onClick={() => setOpenReplyModal(true)}
-              className='py-2 px-6 rounded-lg bg-slate-100 text-slate-500 text-xs font-semibold hover:ring-1 hover:ring-sky-500 mt-2'
+              className='py-2 px-6 rounded-lg bg-[#111121] text-white ring-1 ring-slate-600/40 text-xs font-semibold hover:ring-1 hover:ring-sky-500 mt-2'
             >
               Reply
             </button>
@@ -89,7 +89,7 @@ const Reply = ({ answer, userId }: Answer) => {
           {showRepliesAction && (
             <>
               {answer.totalReplies > 0 && (
-                <div className='mt-4'>
+                <div className='mt-4 text-white'>
                   <button
                     onClick={() => handleLoadComments(answer.id)}
                     className='flex items-center space-x-1'
@@ -132,7 +132,7 @@ const Reply = ({ answer, userId }: Answer) => {
                 />
               </div>
               <div>
-                <p className='font-medium text-slate-700 text-sm block'>{reply?.creator?.name}</p>
+                <p className='font-medium text-white text-sm block'>{reply?.creator?.name}</p>
                 <small className='font-medium text-slate-500'>
                   <Link
                     prefetch='intent'
@@ -148,7 +148,7 @@ const Reply = ({ answer, userId }: Answer) => {
             <div className='ml-12'>
               <div
                 dangerouslySetInnerHTML={{ __html: reply?.answer }}
-                className='prose prose-slate lg:prose-md max-w-none prose-a:text-blue-600'
+                className='prose prose-invert lg:prose-md max-w-none prose-a:text-blue-600'
               />
             </div>
           </div>
