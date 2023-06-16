@@ -5,7 +5,7 @@ import BlurrableImage from '../blurable-img'
 
 const OurVision = () => {
   return (
-    <div className='my-32'>
+    <div className='my-32 container'>
       <motion.div
         className='mx-auto w-11/12 mt-24 md:mb-16 md:mt-32 '
         initial={{ opacity: 0, y: 25 }}

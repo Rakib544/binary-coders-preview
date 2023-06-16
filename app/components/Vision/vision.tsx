@@ -1,21 +1,20 @@
 import { motion } from 'framer-motion'
 const Vision = () => {
   return (
-    <div className='container '>
+    <div className="container bg-[url('/images/guest-pattern.png')] bg-no-repeat bg-right-bottom mt-24 md:mb-16 md:mt-32">
+      <motion.div
+        className=' w-11/12  '
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className='font-SpaceGroteskBold text-5xl leading-[4.2rem] '>
+          {`>`}_ Our vision is to update you <br /> with international standard <br /> Python
+          knowledge
+        </h2>
+      </motion.div>
       <div className='px-4 md:px-12 mt-32'>
-        <motion.div
-          className='mx-auto w-11/12 mt-24 md:mb-16 md:mt-32 '
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className='Title'>
-            <h2 className='font-SpaceGroteskBold text-5xl leading-[4.2rem] '>
-              Our vision is to update you <br /> with international standard Python knowledge
-            </h2>
-          </div>
-        </motion.div>
         <div>
           <div className=' text-center mb-6'>
             <span className='py-2 from-[#D99BFF] from-[18%] to-[#D99BFF]/70 bg-gradient-to-l text-dark text-xl transition-all duration-400 hover:scale-105 cursor-pointer px-4'>

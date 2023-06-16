@@ -50,12 +50,12 @@ const QuestionCard = ({ slug, title, createdAt, views, comments, creator }: Post
         <div className='col-span-10 md:col-span-1 flex justify-between'>
           <BlurrableImage
             blurDataURl={blurImgUrl}
-            className='h-14 w-14 relative'
+            className='h-14 w-14 relative '
             img={
               <img
                 src={creator.profilePicture}
                 alt={creator.name}
-                className='rounded-xl h-14 w-14 object-cover'
+                className=' rounded-xl h-14 w-14 object-cover'
               />
             }
           />
