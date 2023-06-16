@@ -1,8 +1,8 @@
 import { MetaFunction } from '@remix-run/node'
+import { teamData } from '../../data/temData'
 import FacebookIcon from './icons/facebook'
 import GitHubLogo from './icons/github'
 import LinkedinLogo from './icons/linkedin'
-import { teamData } from './temData'
 export const meta: MetaFunction = () => {
   return {
     title: 'About - Binary Coders',

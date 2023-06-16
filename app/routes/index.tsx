@@ -1,9 +1,8 @@
 import { MetaFunction } from '@remix-run/node'
-import AdvantageBinaryCoders from '~/components/advantageBinaryCoders/advantageBinaryCoders'
-import Quote from '~/components/quote/quote'
-import Stack from '~/components/stack/stack'
+import Vision from '~/components/Vision/vision'
+import OurVision from '~/components/ourvision/ourvision'
 import Heading from '../components/heading/heading'
-import OurTarget from '../components/ourTarget/ourTarget'
+import Jurney from '../components/jurney/jurney'
 
 export const meta: MetaFunction = () => {
   return {
@@ -35,11 +34,11 @@ export default function Index() {
   return (
     <main className='text-white'>
       <Heading />
-      <OurTarget />
+      <Jurney />
       {/* <Plan /> */}
-      <Stack />
-      <Quote />
-      <AdvantageBinaryCoders />
+      <Vision />
+      {/* <Quote /> */}
+      <OurVision />
     </main>
   )
 }

@@ -1,14 +1,25 @@
 import { blurImgUrl } from 'data/blur-img-url'
 import { ABCData } from 'data/navbar'
+import { motion } from 'framer-motion'
 import BlurrableImage from '../blurable-img'
-import { Heading } from '../typography'
 
-const AdvantageBinaryCoders = () => {
+const OurVision = () => {
   return (
     <div className='my-32'>
-      <Heading>
-        <span className='px-4'>Advantages of being a part of Binary Coders</span>
-      </Heading>
+      <motion.div
+        className='mx-auto w-11/12 mt-24 md:mb-16 md:mt-32 '
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <div>
+          <h2 className='font-SpaceGroteskBold text-5xl leading-[4.2rem]'>
+            {`>`}_ Academy.py at a glance <br />
+            Let's have a look. How exciting its <br /> journey going to be
+          </h2>
+        </div>
+      </motion.div>
       <div className='my-20 md:text-left text-center md:mx-28  grid grid-cols-3'>
         {ABCData.map((advantageBC) => (
           <div className='md:p-3.5 p-4 md:col-span-1 col-span-3' key={advantageBC.id}>
@@ -34,4 +45,4 @@ const AdvantageBinaryCoders = () => {
   )
 }
 
-export default AdvantageBinaryCoders
+export default OurVision

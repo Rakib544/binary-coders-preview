@@ -80,7 +80,7 @@ const Navbar = ({
   // }, [])
 
   return (
-    <header className='bg-[#131425be] backdrop-blur-md sticky top-0 z-50 border-b-2 border-[#242764]'>
+    <header className='bg-[#131425be] backdrop-blur-md sticky top-0 z-40 border-b-2 border-[#242764]'>
       <nav className='container '>
         {!isNavbarHide ? (
           <div className='flex items-center justify-between py-4 md:py-2 px-2 md:px-10'>
@@ -88,7 +88,7 @@ const Navbar = ({
               <Link prefetch='intent' to='/'>
                 <H1 className='text-5xl font-SpaceGroteskLight text-white'>
                   {'>'}_academy.
-                  <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                  <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-br from-sky-400 from-30%  to-blue-600 to-55% text-7xl'>
                     py
                   </span>{' '}
                 </H1>

@@ -27,7 +27,7 @@ interface Props {
 const ViewersModal = ({ viewers, onClose, pageName }: Props): JSX.Element => {
   return (
     <Modal onClose={onClose}>
-      <div className='flex flex-col h-full pt-3 z-50'>
+      <div className='flex flex-col h-full pt-3 !z-[999px] bg-[#111121] text-white'>
         <div className='px-3 pb-4 shadow-sm'>
           <div className='relative mt-5 text-center'>
             <span className='font-medium'>People watch this {pageName}</span>
@@ -90,7 +90,7 @@ function Modal({
   children: React.ReactNode | React.ReactNode[]
 }) {
   return (
-    <Dialog className='fixed inset-0 z-10' onClose={onClose} open={true}>
+    <Dialog className='fixed inset-0 z-50' onClose={onClose} open={true}>
       <div className='flex flex-col justify-center h-full px-1 pt-4 text-center sm:block sm:p-0'>
         <Dialog.Overlay
           as={motion.div}
