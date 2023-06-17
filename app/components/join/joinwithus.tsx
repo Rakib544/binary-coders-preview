@@ -22,31 +22,34 @@ const JoinWithUs = () => {
       </motion.div>
 
       <div>
-        <ul className='space-y-5'>
-          <li className='flex items-center justify-center'>
+        <ul className='space-y-5 max-w-2xl mx-auto text-left'>
+          <li className='flex items-top'>
             {' '}
             <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
             Sign up on Academy.py and get ready to solve the problem your knowledge!
           </li>
-          <li className='flex items-center justify-center'>
+          <li className='flex items-top'>
             {' '}
             <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
-            Sign up on Academy.py and get ready to solve the problem your knowledge!
+            Start reading python documentation, watch videos for develop your basic understanding in
+            python.
           </li>
-          <li className='flex items-center justify-center'>
+          <li className='flex items-top'>
             {' '}
             <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
-            Sign up on Academy.py and get ready to solve the problem your knowledge!
+            Need practice? Go to our solve problems section to practice programs on that topic you
+            read
           </li>
-          <li className='flex items-center justify-center'>
+          <li className='flex items-top'>
             {' '}
             <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
-            Sign up on Academy.py and get ready to solve the problem your knowledge!
+            Stuck in something? You can ask question on our forums and also can ask on our
+            Academy-AI
           </li>
-          <li className='flex items-center justify-center'>
+          <li className='flex items-top'>
             {' '}
             <CheckCircle2 color='#1ac73c' strokeWidth={0.75} className='mr-3' />
-            Sign up on Academy.py and get ready to solve the problem your knowledge!
+            Be productive and get a lots pro tips from our blogs.
           </li>
         </ul>
 

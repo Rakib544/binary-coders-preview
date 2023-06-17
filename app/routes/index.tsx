@@ -3,6 +3,10 @@ import JoinWithUs from '~/components/join/joinwithus'
 import Heading from '../components/heading/heading'
 import Jurney from '../components/jurney/jurney'
 
+import highlightCss from 'highlight.js/styles/atom-one-dark.css'
+
+import quillCss from 'quill/dist/quill.snow.css'
+
 export const meta: MetaFunction = () => {
   return {
     title: 'Academy.Py',
@@ -27,6 +31,13 @@ export function links() {
       href: '/images/logo.webp',
       as: 'image',
     },
+    {
+      rel: 'preload',
+      as: 'script',
+      href: 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js',
+    },
+    { rel: 'stylesheet', href: highlightCss },
+    { rel: 'stylesheet', href: quillCss },
   ]
 }
 export default function Index() {

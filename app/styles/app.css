@@ -1194,6 +1194,10 @@ video {
   right: 1rem;
 }
 
+.right-\[28\%\] {
+  right: 28%;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -1408,6 +1412,10 @@ video {
 
 .-ml-1 {
   margin-left: -0.25rem;
+}
+
+.-ml-4 {
+  margin-left: -1rem;
 }
 
 .mb-1 {
@@ -1654,6 +1662,10 @@ video {
   height: 24rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .h-\[500px\] {
   height: 500px;
 }
@@ -1750,6 +1762,14 @@ video {
   width: 2rem;
 }
 
+.w-\[110\%\] {
+  width: 110%;
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
 .w-\[72px\] {
   width: 72px;
 }
@@ -1801,6 +1821,10 @@ video {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .flex-1 {
@@ -1860,6 +1884,11 @@ video {
 
 .translate-y-4 {
   --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-12 {
+  --tw-rotate: 12deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2129,10 +2158,6 @@ video {
   overflow: hidden;
 }
 
-.overflow-x-auto {
-  overflow-x: auto;
-}
-
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -2155,16 +2180,16 @@ video {
   white-space: nowrap;
 }
 
-.whitespace-pre {
-  white-space: pre;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
 
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-full {
@@ -2349,6 +2374,11 @@ video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
 .bg-inherit {
   background-color: inherit;
 }
@@ -2408,6 +2438,15 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1213247a\] {
+  background-color: #1213247a;
 }
 
 .bg-opacity-75 {
@@ -2473,6 +2512,12 @@ video {
 .from-\[\#FFD233\] {
   --tw-gradient-from: #FFD233 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 210 51 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-blue-600 {
+  --tw-gradient-from: #2563eb var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(37 99 235 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -2788,6 +2833,10 @@ video {
   padding-left: 0.75rem;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
 .pr-10 {
   padding-right: 2.5rem;
 }
@@ -3101,6 +3150,10 @@ video {
   opacity: 1;
 }
 
+.opacity-20 {
+  opacity: 0.2;
+}
+
 .opacity-25 {
   opacity: 0.25;
 }
@@ -3216,6 +3269,11 @@ video {
 
 .ring-offset-4 {
   --tw-ring-offset-width: 4px;
+}
+
+.blur-3xl {
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter {
@@ -4144,9 +4202,17 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:block {
+    display: block;
+  }
+
   .dark\:text-gray-100 {
     --tw-text-opacity: 1;
     color: rgb(243 244 246 / var(--tw-text-opacity));
+  }
+
+  .dark\:opacity-30 {
+    opacity: 0.3;
   }
 }
 
@@ -4598,6 +4664,14 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .lg\:-right-20 {
+    right: -5rem;
+  }
+
+  .lg\:top-44 {
+    top: 11rem;
+  }
+
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -4648,12 +4722,20 @@ body {
     display: none;
   }
 
+  .lg\:h-72 {
+    height: 18rem;
+  }
+
   .lg\:h-screen {
     height: 100vh;
   }
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:w-\[350px\] {
+    width: 350px;
   }
 
   .lg\:grid-cols-2 {
@@ -4724,6 +4806,16 @@ body {
 
   .lg\:leading-\[4\.2rem\] {
     line-height: 4.2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:h-80 {
+    height: 20rem;
+  }
+
+  .xl\:w-\[500px\] {
+    width: 500px;
   }
 }
 
