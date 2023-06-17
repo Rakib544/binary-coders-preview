@@ -5,11 +5,11 @@ import Jurney from '../components/jurney/jurney'
 
 export const meta: MetaFunction = () => {
   return {
-    title: 'Binary Coders',
+    title: 'Academy.Py',
     description: 'A platform for teaching programming fundamentals to programmers',
-    'og:title': 'Binary Coders',
+    'og:title': 'Academy.Py',
     'og:type': 'website',
-    'og:url': 'https://binary-coders.vercel.app',
+    'og:url': 'https://academy-py.vercel.app/',
     'og:description': 'A platform for teaching programming fundamentals to programmers',
     'og:image': 'https://i.ibb.co/P69y7fJ/thumbnail.png',
   }
