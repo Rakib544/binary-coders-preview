@@ -12,13 +12,11 @@ import {
   useLocation,
   useTransition,
 } from '@remix-run/react'
-import { blurImgUrl } from 'data/blur-img-url'
 import { AnimatePresence, motion } from 'framer-motion'
 import * as React from 'react'
 import 'react-modern-drawer/dist/index.css'
 import { io } from 'socket.io-client'
 import { useSpinDelay } from 'spin-delay'
-import BlurrableImage from './components/blurable-img'
 import Footer from './components/footer/footer'
 import Navbar from './components/navbar'
 import { NotificationMessage } from './components/notification-message'
@@ -361,16 +359,10 @@ export default function App() {
           {location.pathname === '/chat-ai' ? null : (
             <div className='fixed bottom-10 left-5 h-14 w-14 flex items-center justify-center rounded-full bg-[#111121] border border-slate-600/40'>
               <Link to='/chat-ai'>
-                <BlurrableImage
-                  blurDataURl={blurImgUrl}
-                  className='h-16 w-16 relative shrink-0 mx-auto ml-4 mt-4'
-                  img={
-                    <img
-                      src='https://i.ibb.co/WpNQf9c/icons8-chatbot-64.png'
-                      alt=''
-                      className='rounded-full h-12 w-12 object-cover shrink-0'
-                    />
-                  }
+                <img
+                  src='https://i.ibb.co/WpNQf9c/icons8-chatbot-64.png'
+                  alt=''
+                  className='rounded-full h-12 w-12 object-cover shrink-0'
                 />
               </Link>
             </div>

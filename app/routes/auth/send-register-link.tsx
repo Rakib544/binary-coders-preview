@@ -4,10 +4,10 @@ import * as React from 'react'
 import { Input, Label } from '~/components/form-elements'
 import { Spinner } from '~/components/icons/spinner'
 import { sendRegisterAccountLink } from '~/utils/auth.server'
-import logoOfBinaryCoders from '../../assets/logo.webp'
 
 import modalStyles from '@reach/dialog/styles.css'
 import Modal from '~/components/modal'
+import { H1 } from '~/components/typography'
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: modalStyles }]
@@ -48,17 +48,22 @@ const registerLink = () => {
   return (
     <>
       <Link to='/'>
-        <img
-          src={logoOfBinaryCoders}
-          alt='Binary Coders'
-          className='h-12 w-auto absolute mt-12 ml-12'
-        />
+        <div className='flex items-center justify-between z-10 '>
+          <Link prefetch='intent' to='/'>
+            <H1 className='text-2xl lg:text-3xl 2xl:text-5xl font-SpaceGroteskLight text-white'>
+              {'>'}_academy.
+              <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-br from-sky-400 from-30%  to-blue-600 to-55% text-4xl lg:text-5xl 2xl:text-7xl'>
+                py
+              </span>{' '}
+            </H1>
+          </Link>
+        </div>
       </Link>
       <div className='grid grid-cols-2 items-center gap-12 h-screen'>
         <div className='hidden lg:block md:col-span-1'>
           <img src='/images/loginV2.png' alt='register' className='p-20' />
         </div>
-        <div className='col-span-2 lg:col-span-1 p-4 md:p-20 bg-white rounded-xl mx-2 py-10 md:mx-20 lg:mx-8  shadow-2xl shadow-blue-500/10'>
+        <div className='col-span-2 lg:col-span-1 p-4 md:p-20 bg-[#111121] text-white rounded-xl mx-2 py-10 md:mx-20 lg:mx-8 '>
           <h1 className='text-3xl font-bold text-center md:text-left'>Let&apos;s Get Started!</h1>
           <p className='mb-4 text-center md:text-left'>
             Create an account to Binary Coders to get all features

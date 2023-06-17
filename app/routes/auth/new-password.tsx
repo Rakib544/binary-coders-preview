@@ -103,7 +103,7 @@ const ResetPassword = () => {
         {loaderData?.status === 201 && (
           <motion.div
             variants={childVariants}
-            className='bg-white p-4 md:p-10 mx-4 md:mx-10 rounded-xl'
+            className='bg-[#111121] text-white border border-slate-600/40 p-4 md:p-10 mx-4 md:mx-10 rounded-xl'
           >
             <h1 className='text-3xl font-semibold text-slate-800 py-4'>Change your password</h1>
             {actionData?.status === 200 ? (

@@ -102,7 +102,7 @@ const Reset = () => {
       </div>
       <motion.div
         variants={childVariants}
-        className='col-span-2 sm:col-span-2 md:col-span-1 px-6 mt-40 md:mt-0 md:px-14 bg-white py-10 mx-8 rounded-xl  shadow-2xl shadow-blue-500/10'
+        className='col-span-2 sm:col-span-2 md:col-span-1 px-6 mt-40 md:mt-0 md:px-14 bg-[#111121] text-white border border-slate-600/40 py-10 mx-8 rounded-xl '
       >
         <h1 className='text-3xl font-bold text-center md:text-left'>
           Are you forgot your password ?

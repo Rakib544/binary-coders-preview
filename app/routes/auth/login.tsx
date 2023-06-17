@@ -10,10 +10,10 @@ import { Form, Link, useActionData, useTransition } from '@remix-run/react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Input, Label } from '~/components/form-elements'
 import { Spinner } from '~/components/icons/spinner'
+import { H1 } from '~/components/typography'
 import { login } from '~/utils/auth.server'
 import { loginFormSchema } from '~/utils/form-valiation-schema'
 import { createUserSession, getUserInfo } from '~/utils/session.server'
-import logoOfBinaryCoders from '../../assets/logo.webp'
 
 export const loader: LoaderFunction = async ({ request }) => {
   const res = await getUserInfo(request)
@@ -113,11 +113,16 @@ const Login = () => {
   return (
     <>
       <Link to='/'>
-        <img
-          src={logoOfBinaryCoders}
-          alt='Binary Coders'
-          className='h-12 w-auto absolute mt-8 ml-12'
-        />
+        <div className='flex items-center justify-between z-10 '>
+          <Link prefetch='intent' to='/'>
+            <H1 className='text-2xl lg:text-3xl 2xl:text-5xl font-SpaceGroteskLight text-white'>
+              {'>'}_academy.
+              <span className='font-SpaceGroteskBold bg-clip-text text-transparent bg-gradient-to-br from-sky-400 from-30%  to-blue-600 to-55% text-4xl lg:text-5xl 2xl:text-7xl'>
+                py
+              </span>{' '}
+            </H1>
+          </Link>
+        </div>
       </Link>
       <motion.div
         className='sm:flex sm:items-center h-auto overflow-auto lg:h-screen lg:overflow-hidden bg-white md:bg-inherit'
@@ -139,7 +144,7 @@ const Login = () => {
           />
         </div>
         <motion.div
-          className='w-full mx-auto sm:w-2/3 lg:w-1/2 px-4 sm:px-8 md:px-12 lg:px-24 my-16 bg-white shadow-2xl shadow-blue-500/10 rounded-xl lg:mx-8 py-10'
+          className='w-full mx-auto sm:w-2/3 lg:w-1/2 px-4 sm:px-8 md:px-12 lg:px-24 my-16 bg-[#111121] text-white border border-slate-600/40 rounded-xl lg:mx-8 py-10'
           variants={childVariants}
         >
           <div className='block lg:hidden'>
@@ -205,7 +210,7 @@ const Login = () => {
             <div className='mb-2 flex justify-center'>
               <button
                 type='submit'
-                className='px-16 py-3 w-full rounded-lg bg-blue-500 text-white inline-block mt-8 text-center text-sm font-medium shadow-lg shadow-blue-500/30 hover:bg-blue-600 border-2 border-blue-500 hover:border-blue-600 transition duration-300'
+                className='px-16 py-3 w-full rounded-lg bg-blue-500 text-white inline-block mt-8 text-center text-sm font-medium  hover:bg-blue-600 border-2 border-blue-500 hover:border-blue-600 transition duration-300'
               >
                 {transition.submission ? (
                   <div className='flex justify-center items-center'>
