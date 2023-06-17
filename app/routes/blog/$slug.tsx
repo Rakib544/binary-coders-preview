@@ -195,7 +195,7 @@ const SingleBlog = () => {
         <motion.div
           variants={fadeInUp}
           dangerouslySetInnerHTML={{ __html: blog.html }}
-          className='prose prose-invert text-white lg:prose-lg max-w-none mb-24 prose-a:text-blue-600 siliguri-font'
+          className='prose prose-invert font-siligori text-white lg:prose-lg max-w-none mb-24 prose-a:text-blue-600 siliguri-font'
         ></motion.div>
       </motion.div>
       <Modal open={modalOpen} setOpen={setModalOpen}>

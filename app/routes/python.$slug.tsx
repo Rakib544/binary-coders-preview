@@ -76,7 +76,7 @@ const TopicDetails = () => {
         )}
         <div
           dangerouslySetInnerHTML={{ __html: loaderData?.topic?.description }}
-          className='prose prose-slate lg:prose-md max-w-none mb-24 prose-a:text-blue-600 siliguri-font'
+          className='prose prose-slate font-siligori lg:prose-md max-w-none mb-24 prose-a:text-blue-600 siliguri-font'
         />
       </div>
     </div>

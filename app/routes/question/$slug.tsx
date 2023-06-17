@@ -271,7 +271,7 @@ const SingleQuestion = () => {
         <motion.div
           variants={fadeInUp}
           dangerouslySetInnerHTML={{ __html: question.description }}
-          className='prose prose-invert lg:prose-lg max-w-none mt-12 mb-32 prose-a:text-blue-600 siliguri-font'
+          className='prose prose-invert font-siligori lg:prose-lg max-w-none mt-12 mb-32 prose-a:text-blue-600 siliguri-font'
         />
 
         <motion.h3
