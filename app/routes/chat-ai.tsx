@@ -80,7 +80,7 @@ export default function AskAI() {
                   />
                 }
               />
-              <p>{data.answer}</p>
+              <div className=' w-full max-w-full'>{data.answer}</div>
             </div>
           </div>
         ))}
@@ -113,7 +113,7 @@ export default function AskAI() {
                   />
                 }
               />
-              <p>......</p>
+              <p className='animate-pulse transition duration-150'>Generating your answer...</p>
             </div>
           </div>
         ) : null}

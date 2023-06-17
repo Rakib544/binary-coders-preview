@@ -18,6 +18,7 @@ export async function getAiData(prompt: string) {
     prompt,
   })
   const completion = response.data.choices[0].text
+  console.log(completion)
 
   return completion
 }
