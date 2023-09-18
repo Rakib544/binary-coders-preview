@@ -101,7 +101,7 @@ const Heading = () => {
             <div className=''>
               <code>
                 <div
-                  className='border border-slate-600/40 p-4 rounded-2xl overflow-hidden bg-[#1213247a] backdrop-blur-md'
+                  className='border border-slate-600/40 p-4 rounded-2xl overflow-hidden bg-[#1213247a] backdrop-blur-md text-xs sm:text-sm md:text-lg'
                   dangerouslySetInnerHTML={{ __html: code }}
                 ></div>
               </code>

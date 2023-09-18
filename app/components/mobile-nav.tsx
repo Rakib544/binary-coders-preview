@@ -1,6 +1,7 @@
 // import headerNavLinks from '@/data/headerNavLinks'
 import { Form, Link } from '@remix-run/react'
 import { headerNavLinks } from 'data/navbar'
+import { X } from 'lucide-react'
 import { useState } from 'react'
 import 'react-modern-drawer/dist/index.css'
 import NotificationDropDown from './notification-dropdown'
@@ -35,7 +36,7 @@ const MobileNav = ({
   }
 
   return (
-    <div className='md:hidden'>
+    <div className='block md:hidden relative'>
       <div className='flex items-center'>
         {username && <NotificationDropDown NOTIFICATION_SERVER_URL={NOTIFICATION_SERVER_URL} />}
         <button
@@ -63,17 +64,21 @@ const MobileNav = ({
         </button>
       </div>
       <div
-        className={` fixed top-0 right-0 z-50 h-full w-full transform !bg-[#111121] text-white duration-300 ease-in-out ${
-          navShow ? 'translate-x-0' : 'translate-x-full'
+        className={` fixed inset-0 z-50  transform !bg-[#111121] text-white duration-300 ease-in-out ${
+          navShow ? 'translate-x-0 block' : 'translate-x-full hidden'
         }`}
       >
-        <button
-          type='button'
-          aria-label='toggle modal'
-          className='fixed h-full w-full cursor-auto focus:outline-none'
-          onClick={onToggleNav}
-        ></button>
-        <nav className='fixed py-6 px-6  h-full w-full z-20 !bg-[#111121]'>
+        <div className='relative mb-10'>
+          <button
+            type='button'
+            aria-label='toggle modal'
+            className='h-8 w-8 absolute left-3 top-3 border border-1 rounded-full cursor-auto flex items-center justify-center'
+            onClick={onToggleNav}
+          >
+            <X size='16' />
+          </button>
+        </div>
+        <nav className='py-6 px-6  h-[100vh] w-[100vw] z-20 !bg-[#111121]'>
           {username && (
             <Link to={`/user/${username}`} prefetch='intent' onClick={onToggleNav}>
               <div className='flex items-center space-x-4 border-b border-slate-300 pb-4'>
@@ -90,7 +95,7 @@ const MobileNav = ({
             </Link>
           )}
           {mobileNavLinks.map((link) => (
-            <div key={link.title} className=' px-4 py-4'>
+            <div key={link.title} className=' px-4 py-4 z-20 !bg-[#111121]'>
               <Link
                 prefetch='intent'
                 to={link.href}

@@ -63,13 +63,15 @@ const Navbar = ({
                 </H1>
               </Link>
             </div>
-            <MobileNav
-              fullName={fullName}
-              profilePicture={profilePicture}
-              username={username}
-              NOTIFICATION_SERVER_URL={NOTIFICATION_SERVER_URL}
-            />
-            <div>
+            <div className='block md:hidden'>
+              <MobileNav
+                fullName={fullName}
+                profilePicture={profilePicture}
+                username={username}
+                NOTIFICATION_SERVER_URL={NOTIFICATION_SERVER_URL}
+              />
+            </div>
+            <div className='hidden md:block'>
               <ul className='hidden flex-none md:flex items-center'>
                 {headerNavLinks.map((link) => (
                   <NavLink key={link.href} to={link.href} prefetch='intent' className='text-white'>
