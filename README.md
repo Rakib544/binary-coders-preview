@@ -43,8 +43,7 @@ Academy.PY is a platform designed to teach Python basics to college juniors thro
 
 ## Demo
 
-- [Live Site](http://your-live-site.com)
-- [GitHub Repository](https://github.com/yourusername/academy-py)
+- [Live Site](https://academy-py.vercel.app/)
 
 ## License
 This project is licensed under the MIT License.
