@@ -1,34 +1,50 @@
-# Academy.py: Your Python Learning Hub
+# Academy.PY - Python Learning Platform
 
-Welcome to *Academy.py*, your ultimate destination for mastering the Python programming language! Whether you're a beginner taking your first steps into the world of coding or an experienced developer looking to hone your Python skills, Academy.py is here to guide you on your journey. Join our vibrant community of learners, where you can not only learn Python but also seek help and share your knowledge with others.
+Academy.PY is a platform designed to teach Python basics to college juniors through interactive exercises, blogs, and a Q&A feature. The platform also provides pre-set coding exercises to reinforce key concepts.
 
-## Our Commitment to Python Excellence
+## Features
+- **Python Documentation:** Provides clear and concise Python documentation for learners.
+- **Blog & Q&A:** Users can engage in discussions through blog posts and Q&A features.
+- **Coding Exercises:** Interactive exercises for hands-on learning with real-time feedback.
+- **Coding Environment:** Built-in Python coding environment with preset exercises.
 
-At Academy.py, we are dedicated to providing you with the best resources to learn and excel in Python. Our mission is to make Python programming accessible to everyone, ensuring that learning is both enjoyable and effective.
+## Tech Stack
+- **Frontend:** Remix, TypeScript, Tailwind CSS
+- **Backend:** MongoDB, Prisma
+- **Tools & Libraries:** Jest (for testing)
 
-## Trendy and Comprehensive Learning Resources
+## Getting Started
 
-Discover our trendy and comprehensive learning resources:
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/rakib-544/binary-coders-preview.git
+    ```
 
-- *Python Tutorials*: Step-by-step tutorials that cover Python from the basics to advanced topics.
-- *Interactive Code Playground*: Practice your Python skills in our interactive code playground.
-- *Ask and Answer*: Have a question about Python? Ask the community, and get answers like on Stack Overflow.
-- *Python Tips and Tricks*: Stay updated with the latest tips and tricks shared by our Python experts.
-- *Python Blogs*: Explore in-depth blogs written by our admin and role-based access writers about Python.
+2. Navigate into the project directory:
+    ```bash
+    cd binary-coders-preview
+    ```
 
-## Why Choose Academy.py?
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-- *Interactive Learning*: Learn by doing with our hands-on code playground.
-- *Community Support*: Get help and guidance from a supportive Python community.
-- *Expert Insights*: Benefit from the knowledge of experienced Python developers.
-- *Up-to-date Content*: Stay current with the ever-evolving Python ecosystem.
+4. Set up MongoDB:
+    - Make sure MongoDB is running locally or use a cloud-based MongoDB instance.
+    - Add your MongoDB URI to the `.env` file.
 
-## Join the Python Learning Revolution
+5. Start the application:
+    ```bash
+    npm run dev
+    ```
 
-Ready to dive into the world of Python with Academy.py? Start your learning journey today and become a Python pro. Connect with fellow learners, seek help when needed, and explore the vast world of Python programming.
+6. Visit `http://localhost:3000` to view the app.
 
-Visit our website at [www.academypy.com](http://academypy.vercel.app/) for our extensive Python learning resources.
+## Demo
 
-For any questions or assistance, don't hesitate to reach out to us at [support@academypy.com](mailto:support@academypy.com). Your success in mastering Python is our top priority!
+- [Live Site](http://your-live-site.com)
+- [GitHub Repository](https://github.com/yourusername/academy-py)
 
-Welcome to the Academy.py community, where Python excellence meets trendy learning
+## License
+This project is licensed under the MIT License.
